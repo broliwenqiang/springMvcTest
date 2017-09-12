@@ -2,6 +2,7 @@
  "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
  "http://java.sun.com/dtd/web-app_2_3.dtd" >
 
+<!--这里报错，是因为不符合web-app_2_3.dtd规范，只要删掉上面这句话就行了-->
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
 
@@ -13,7 +14,7 @@
   <!-- 加载spring的xml配置文件到 spring的上下文容器中 -->
   <context-param>
     <param-name>contextConfigLocation</param-name>
-    <param-value>/WEB-INF/spring.xml</param-value>
+    <param-value>classpath*:/spring-context.xml</param-value>
   </context-param>
 
 
@@ -22,7 +23,7 @@
     <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
     <init-param>
       <param-name>contextConfigLocation</param-name>
-      <param-value>/WEB-INF/springmvc-context.xml</param-value>
+      <param-value>classpath*:/springmvc-context.xml</param-value>
     </init-param>
      <load-on-startup>1</load-on-startup>
   </servlet>

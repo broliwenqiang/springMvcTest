@@ -14,6 +14,6 @@
 </head>
 <body>
 
-${requestScope.testString}
+${testString}
 </body>
 </html>
